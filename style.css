@@ -1,0 +1,102 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    background: linear-gradient(to right, #4b79a1, #283e51);
+    color: #fff;
+}
+
+.container {
+    text-align: center;
+    max-width: 700px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(5px); /* Adds a nice blur effect to the background */
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #ffffff;
+    margin: 0;
+}
+
+h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ffd700;
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+
+/* Button Styles */
+.button-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.button-group .btn {
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    text-align: center;
+    font-weight: bold;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.button-group .btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.btn {
+    flex: 1 1 45%;
+    max-width: 220px;
+    text-align: center;
+}
+
+/* Admin Button */
+.admin-button {
+    margin-top: 25px;
+}
+
+.admin-button .btn {
+    width: 100%;
+    background: linear-gradient(135deg, #fc4a1a, #f7b733);
+}
+
+/* Add animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.container, .button-group .btn, .admin-button .btn {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 600px) {
+    .btn {
+        flex: 1 1 100%;
+    }
+}
